@@ -231,13 +231,13 @@ Hotel Miranda | AboutUs
             <div class="swiper aboutuscounter__photoswiper" id="aboutusphotoswiper">
                 <div class="swiper-wrapper  aboutuscounter__photowrapper">
                     <div class="swiper-slide  aboutuscounter__photoswiper-photo">
-                        <img src="/assets/Menu__IndexSection/Foto1.jpg" alt="Restaurant Photo 1">
+                        <img src="https://dashboardgeneralassets.s3.eu-west-1.amazonaws.com/Fotos+Dashboard/room6.jpeg" alt="Restaurant Photo 1">
                     </div>
                     <div class="swiper-slide  aboutuscounter__photoswiper-photo">
-                        <img src="/assets/Menu__IndexSection/Foto2.jpg" alt="Restaurant Photo 2">
+                        <img src="https://dashboardgeneralassets.s3.eu-west-1.amazonaws.com/Fotos+Dashboard/room7.jpeg" alt="Restaurant Photo 2">
                     </div>
                     <div class="swiper-slide aboutuscounter__photoswiper-photo">
-                        <img src="/assets/Menu__IndexSection/Foto3.png" alt="Restaurant Photo 3">
+                        <img src="https://dashboardgeneralassets.s3.eu-west-1.amazonaws.com/Fotos+Dashboard/room8.jpeg" alt="Restaurant Photo 3">
                     </div>
                 </div>
                 <div class="swiper-pagination" id="aboutuscounter__photopagination"></div>
