@@ -130,3 +130,11 @@ window.addEventListener("resize", () => {
   initMenuSwiper();
   initMenuPhotoSwiper();
 });
+
+const goToRooms = () => {
+  window.location.href = 'rooms.php';
+}
+
+const goToAboutUs = () =>{
+  window.location.href = 'aboutus.php';
+}
