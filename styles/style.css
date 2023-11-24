@@ -2014,10 +2014,12 @@ ul {
   font-family: Archivo;
   font-size: 1rem;
   font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
 }
 .roomshow__inner {
   display: inline-block;
-  max-width: 500px;
+  max-width: 700px;
 }
 .roomshow__content {
   color: #777;
@@ -2077,7 +2079,25 @@ ul {
   margin: 0 auto 15px;
 }
 .roomshow__swiper {
-  height: 2000px;
+  height: 2150px;
+}
+.roomshow__swiper-pagination {
+  margin-top: 15px;
+}
+.roomshow__swiper .swiper-pagination-bullet {
+  margin: 0 5px !important;
+  width: 30px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+  font-size: 16px !important;
+  background-color: #bead8e !important;
+  color: #fff !important;
+  border-radius: 50% !important;
+  text-align: center !important;
+  justify-content: center !important;
+}
+.roomshow__swiper .swiper-pagination-cover {
+  margin: 0 auto 45px !important;
 }
 
 .roomoffer__btn {
