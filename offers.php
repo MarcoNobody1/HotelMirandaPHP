@@ -23,7 +23,7 @@ $randomRooms = array_intersect_key($allRooms, array_flip($randomRoomIndices));
 
 
 
-$discountedRooms = array_filter($randomRooms, function ($room) {
+$discountedRooms = array_filter($allRooms, function ($room) {
     return $room['discount'] !== 0;
 });
 
