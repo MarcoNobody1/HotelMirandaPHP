@@ -2237,8 +2237,7 @@ ul {
   margin-bottom: 16px;
 }
 .roomoffer__swiper {
-  max-height: 2300px;
-  height: auto;
+  height: 2100px;
 }
 .roomoffer__swiper-pagination {
   margin-top: 15px;
