@@ -3,7 +3,6 @@ const menuCross = document.getElementById("menuCross");
 const nav = document.getElementById("nav");
 const header = document.querySelector(".header");
 
-
 menuBurguer.addEventListener("click", () => {
   menuBurguer.classList.add("header__menuiconburguer--closed");
   menuCross.classList.remove("header__menuiconcross--closed");
@@ -34,4 +33,27 @@ window.addEventListener("mousemove", (event) => {
   } else if (event.clientY > 210 && window.innerWidth > 999) {
     header.classList.remove("header--float");
   }
+});
+
+function initRoomsSwiper() {
+  var swiper;
+  swiper = new Swiper(".roomshow__swiper", {
+    direction: "vertical",
+    pagination: {
+      el: ".roomshow__swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+    slidesPerView: 5,
+  });
+
+  return null;
+}
+
+initRoomsSwiper();
+
+window.addEventListener("resize", () => {
+  initRoomsSwiper();
 });
