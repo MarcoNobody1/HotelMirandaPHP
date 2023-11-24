@@ -2076,6 +2076,9 @@ ul {
   display: block;
   margin: 0 auto 15px;
 }
+.roomshow__swiper {
+  height: 2000px;
+}
 
 .roomoffer__btn {
   background: #bead8e;
