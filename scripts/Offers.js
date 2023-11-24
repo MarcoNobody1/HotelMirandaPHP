@@ -35,6 +35,25 @@ window.addEventListener("mousemove", (event) => {
   }
 });
 
+function initRoomsSwiper() {
+  var swiper2;
+  swiper2 = new Swiper(".roomoffer__swiper", {
+    direction: "horizontal",
+    pagination: {
+      el: ".roomoffer__swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+    slidesPerView: 1,
+  });
+
+  return null;
+}
+
+initRoomsSwiper();
+
 function initOffersSwiper() {
   var swiper = new Swiper("#popularlist__swiper", {
     navigation: {
@@ -48,4 +67,9 @@ initOffersSwiper();
 
 window.addEventListener("resize", () => {
   initOffersSwiper();
+  initRoomsSwiper();
 });
+
+const goToRoomDetails = () => {
+  window.location.href = 'roomdetails.php';
+}
