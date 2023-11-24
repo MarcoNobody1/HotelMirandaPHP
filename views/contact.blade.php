@@ -42,7 +42,7 @@ Hotel Miranda | Contact
     </section>
     <section class="contactform">
         <div class="contactform__inner">
-            <form class="contactform__form">
+            <form class="contactform__form" method="POST" id="contact_form">
                 <div class="contactform__inputwrapper">
                     <input autocomplete="true" placeholder="Your full name" type="text" name="name" id="name">
                 </div>
@@ -59,8 +59,9 @@ Hotel Miranda | Contact
                     <textarea placeholder="Tell us what you need" name="message" id="message" cols="30"
                         rows="10"></textarea>
                 </div>
+                <button class="contactform__btn" type="submit">GET FREE QUOTE</button>
             </form>
-            <button class="contactform__btn" type="submit">GET FREE QUOTE</button>
+           
         </div>
     </section>
 @endsection
