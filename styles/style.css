@@ -2141,10 +2141,6 @@ ul {
   gap: 17px;
   width: 100%;
 }
-.roomoffer__facility:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-}
 .roomoffer__facility-desc {
   color: #777;
   font-family: Roboto;
@@ -2211,7 +2207,7 @@ ul {
   text-decoration: line-through;
 }
 .roomoffer__inner {
-  max-width: 375px;
+  max-width: 392px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -2219,7 +2215,8 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 32px;
+  margin: 0 17px 50px;
+  min-width: 335px;
 }
 .roomoffer__pretitle {
   color: #777;
@@ -2238,6 +2235,28 @@ ul {
   line-height: 48px;
   letter-spacing: -1.44px;
   margin-bottom: 16px;
+}
+.roomoffer__swiper {
+  max-height: 2300px;
+  height: auto;
+}
+.roomoffer__swiper-pagination {
+  margin-top: 15px;
+}
+.roomoffer__swiper .swiper-pagination-bullet {
+  margin: 0 5px !important;
+  width: 30px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+  font-size: 16px !important;
+  background-color: #bead8e !important;
+  color: #fff !important;
+  border-radius: 50% !important;
+  text-align: center !important;
+  justify-content: center !important;
+}
+.roomoffer__swiper .swiper-pagination-cover {
+  margin: 0 auto 45px !important;
 }
 
 .popularlist {
