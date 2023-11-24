@@ -3,7 +3,6 @@ const menuCross = document.getElementById("menuCross");
 const nav = document.getElementById("nav");
 const header = document.querySelector(".header");
 
-
 menuBurguer.addEventListener("click", () => {
   menuBurguer.classList.add("header__menuiconburguer--closed");
   menuCross.classList.remove("header__menuiconcross--closed");
@@ -33,5 +32,17 @@ window.addEventListener("mousemove", (event) => {
     header.classList.add("header--float");
   } else if (event.clientY > 210 && window.innerWidth > 999) {
     header.classList.remove("header--float");
+  }
+});
+
+let form = document.querySelector("#contact_form");
+let nameinput = document.querySelector("#name");
+
+form.addEventListener("submit", (e) => {
+  if (nameinput.value.trim() === "") {
+    e.preventDefault();
+    console.log("x")
+  } else {
+    console.log("y");
   }
 });
