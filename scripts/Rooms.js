@@ -38,7 +38,7 @@ window.addEventListener("mousemove", (event) => {
 function initRoomsSwiper() {
   var swiper;
   swiper = new Swiper(".roomshow__swiper", {
-    direction: "vertical",
+    direction: "horizontal",
     pagination: {
       el: ".roomshow__swiper-pagination",
       clickable: true,
@@ -46,7 +46,7 @@ function initRoomsSwiper() {
         return '<span class="' + className + '">' + (index + 1) + "</span>";
       },
     },
-    slidesPerView: 5,
+    slidesPerView: 1,
   });
 
   return null;
