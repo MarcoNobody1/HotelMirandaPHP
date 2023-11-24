@@ -17,27 +17,27 @@ Hotel Miranda | Contact
     <section class="contactoptions">
         <div class="contactoptions__inner">
             <div class="contactoptions__option1">
-                <img class="contactoptions__icon" src="../assets/Footer/contact-maps.png" alt="Address">
+                <img class="contactoptions__icon" src="/assets/Footer/contact-maps.png" alt="Address">
                 <div class="contactoptions__textwrapper">
                     <h4 class="contactoptions__title">Hotel Address</h4>
                     <p class="contactoptions__content">C. de la Princesa, 31, 2º, 28008 Madrid</p>
                 </div>
             </div>
             <div class="contactoptions__option2">
-                <img class="contactoptions__icon" src="../assets/Footer/contact-phone.png" alt="Phone">
+                <img class="contactoptions__icon" src="/assets/Footer/contact-phone.png" alt="Phone">
                 <div class="contactoptions__textwrapper">
                     <h4 class="contactoptions__title">Phone Number</h4>
                     <p class="contactoptions__content">+34 671 25 13 77</p>
                 </div>
             </div>
             <div class="contactoptions__option3">
-                <img class="contactoptions__icon" src="../assets/Footer/contact email.png" alt="Email">
+                <img class="contactoptions__icon" src="/assets/Footer/contact email.png" alt="Email">
                 <div class="contactoptions__textwrapper">
                     <h4 class="contactoptions__title">Email</h4>
                     <p class="contactoptions__content">marcocamaradiaz@gmail.com</p>
                 </div>
             </div>
-            <img class="contactoptions__img" src="../assets/ContactPage/screen.jpg" alt="Man on the Mountain">
+            <img class="contactoptions__img" src="/assets/ContactPage/screen.jpg" alt="Man on the Mountain">
         </div>
     </section>
     <section class="contactform">

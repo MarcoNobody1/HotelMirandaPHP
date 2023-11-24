@@ -1,4 +1,4 @@
-@import "../variables";
+@import "/variables";
 
 .facilities {
   text-align: center;
@@ -52,19 +52,19 @@
   @include facilitiescard;
 }
 .cardtwo {
-  @include facilitiescard($bg: url(../assets/Facilities__swiper/bg-card2.png));
+  @include facilitiescard($bg: url(/assets/Facilities__swiper/bg-card2.png));
 }
 .cardthree {
-  @include facilitiescard($bg: url(../assets/Facilities__swiper/bg-card3.png));
+  @include facilitiescard($bg: url(/assets/Facilities__swiper/bg-card3.png));
 }
 .cardfour {
-  @include facilitiescard($bg: url(../assets/Facilities__swiper/bg-card4.png));
+  @include facilitiescard($bg: url(/assets/Facilities__swiper/bg-card4.png));
 }
 .cardfive {
-  @include facilitiescard($bg: url(../assets/Facilities__swiper/bg-card5.png));
+  @include facilitiescard($bg: url(/assets/Facilities__swiper/bg-card5.png));
 }
 .cardsix {
-  @include facilitiescard($bg: url(../assets/Facilities__swiper/bg-card6.png));
+  @include facilitiescard($bg: url(/assets/Facilities__swiper/bg-card6.png));
 }
 
 @media only screen and (min-width: 1000px) {

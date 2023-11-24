@@ -1,22 +1,22 @@
-@import "../variables";
+@import "/variables";
 
 .aboutcard1 {
     @include aboutfacilitiescard;
 }
 .aboutcard2 {
-    @include aboutfacilitiescard($bg: url("../../assets/AboutUsPage/bg2.png"));
+    @include aboutfacilitiescard($bg: url("//assets/AboutUsPage/bg2.png"));
 }
 .aboutcard3 {
-    @include aboutfacilitiescard($bg: url("../../assets/AboutUsPage/bg3.png"));
+    @include aboutfacilitiescard($bg: url("//assets/AboutUsPage/bg3.png"));
 }
 .aboutcard4 {
-    @include aboutfacilitiescard($bg: url("../../assets/AboutUsPage/bg4.png"));
+    @include aboutfacilitiescard($bg: url("//assets/AboutUsPage/bg4.png"));
 }
 .aboutcard5 {
-    @include aboutfacilitiescard($bg: url("../../assets/AboutUsPage/bg5.png"));
+    @include aboutfacilitiescard($bg: url("//assets/AboutUsPage/bg5.png"));
 }
 .aboutcard6 {
-    @include aboutfacilitiescard($bg: url("../../assets/AboutUsPage/bg6.png"));
+    @include aboutfacilitiescard($bg: url("//assets/AboutUsPage/bg6.png"));
 }
 .aboutusfacilities {
     background: #222;

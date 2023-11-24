@@ -24,13 +24,13 @@ Hotel Miranda | Rooms
                     <div class="roomshow__roomwrapper">
                         <img class="roomshow__photo" src="{{ $room['photo'] }}" alt="Hotel Room">
                         <div class="roomshow__icons">
-                            <img src="../assets/Rooms__desc Icons/icon 1.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 2.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 3.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 4.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 5.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 6.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 7.svg" alt="" class="">
+                            <img src="/assets/Rooms__desc Icons/icon 1.svg" alt="" class="">
+                            <img src="/assets/Rooms__desc Icons/icon 2.svg" alt="" class="">
+                            <img src="/assets/Rooms__desc Icons/icon 3.svg" alt="" class="">
+                            <img src="/assets/Rooms__desc Icons/icon 4.svg" alt="" class="">
+                            <img src="/assets/Rooms__desc Icons/icon 5.svg" alt="" class="">
+                            <img src="/assets/Rooms__desc Icons/icon 6.svg" alt="" class="">
+                            <img src="/assets/Rooms__desc Icons/icon 7.svg" alt="" class="">
                         </div>
                         <div class="roomshow__desc">
                             <h3 class="roomshow__title">{{ $room['type'] }}</h3>

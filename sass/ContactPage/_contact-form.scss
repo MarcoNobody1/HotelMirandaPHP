@@ -1,4 +1,4 @@
-@import "../variables";
+@import "/variables";
 
 .contactform {
     &__btn {
@@ -50,31 +50,31 @@
 }
 
 #name {
-    background-image: url('../../assets/ContactPage/fullname.svg');
+    background-image: url('//assets/ContactPage/fullname.svg');
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
 
 #email {
-    background-image: url('../../assets/ContactPage/email.svg');
+    background-image: url('//assets/ContactPage/email.svg');
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
 
 #phone {
-    background-image: url('../../assets/ContactPage/phone.svg');
+    background-image: url('//assets/ContactPage/phone.svg');
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
 
 #subject {
-    background-image: url('../../assets/ContactPage/subject.svg');
+    background-image: url('//assets/ContactPage/subject.svg');
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
 
 #message {
-    background-image: url('../../assets/ContactPage/message.svg');
+    background-image: url('//assets/ContactPage/message.svg');
     background-repeat: no-repeat;
     background-position: 5% 17%;
 }

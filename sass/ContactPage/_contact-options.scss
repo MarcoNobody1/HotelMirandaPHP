@@ -1,4 +1,4 @@
-@import "../variables";
+@import "/variables";
 
 .contactoptions {
     margin-bottom: 60px;
@@ -17,7 +17,7 @@
     }
     &__option1 {
         display: flex;
-        background-image: url("../../assets/ContactPage/bg1.png");
+        background-image: url("//assets/ContactPage/bg1.png");
         background-size: contain;
         align-items: flex-start;
         padding: 53px 71px 57px 32px;
@@ -25,7 +25,7 @@
     }
     &__option2 {
         display: flex;
-        background-image: url("../../assets/ContactPage/bg2.png");
+        background-image: url("//assets/ContactPage/bg2.png");
         background-size: contain;
         align-items: flex-start;
         padding: 53px 71px 57px 32px;
@@ -33,7 +33,7 @@
     }
     &__option3 {
         display: flex;
-        background-image: url("../../assets/ContactPage/bg3.png");
+        background-image: url("//assets/ContactPage/bg3.png");
         background-size: contain;
         align-items: flex-start;
         padding: 53px 71px 57px 32px;

@@ -502,7 +502,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   flex-direction: column;
   align-items: center;
   max-width: 270px;
-  background-image: url("../assets/AboutUs-Card-One-Background.png");
+  background-image: url("/assets/AboutUs-Card-One-Background.png");
   background-size: contain;
   background-repeat: no-repeat;
   box-shadow: 0px 8px 16px 0px rgba(34, 34, 34, 0.02);
@@ -1060,42 +1060,42 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .cardone {
-  background-image: url("../assets/Facilities__swiper/bg-card1.png");
+  background-image: url("/assets/Facilities__swiper/bg-card1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .cardtwo {
-  background-image: url(../assets/Facilities__swiper/bg-card2.png);
+  background-image: url(/assets/Facilities__swiper/bg-card2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .cardthree {
-  background-image: url(../assets/Facilities__swiper/bg-card3.png);
+  background-image: url(/assets/Facilities__swiper/bg-card3.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .cardfour {
-  background-image: url(../assets/Facilities__swiper/bg-card4.png);
+  background-image: url(/assets/Facilities__swiper/bg-card4.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .cardfive {
-  background-image: url(../assets/Facilities__swiper/bg-card5.png);
+  background-image: url(/assets/Facilities__swiper/bg-card5.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .cardsix {
-  background-image: url(../assets/Facilities__swiper/bg-card6.png);
+  background-image: url(/assets/Facilities__swiper/bg-card6.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1525,7 +1525,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .footer__inner {
   padding: 32px 22px;
-  background-image: url("../assets/Footer/footerbgapp.png");
+  background-image: url("/assets/Footer/footerbgapp.png");
   background-size: cover;
   margin: 0 auto;
 }
@@ -1593,7 +1593,7 @@ ul {
 @media only screen and (min-width: 1000px) {
   .footer__inner {
     padding: 100px 22px;
-    background-image: url("../assets/Footer/footerbgweb.png");
+    background-image: url("/assets/Footer/footerbgweb.png");
     background-size: cover;
     margin: 0 auto;
     display: flex;
@@ -2366,7 +2366,7 @@ ul {
 }
 .contactoptions__option1 {
   display: flex;
-  background-image: url("../../assets/ContactPage/bg1.png");
+  background-image: url("//assets/ContactPage/bg1.png");
   background-size: contain;
   align-items: flex-start;
   padding: 53px 71px 57px 32px;
@@ -2374,7 +2374,7 @@ ul {
 }
 .contactoptions__option2 {
   display: flex;
-  background-image: url("../../assets/ContactPage/bg2.png");
+  background-image: url("//assets/ContactPage/bg2.png");
   background-size: contain;
   align-items: flex-start;
   padding: 53px 71px 57px 32px;
@@ -2382,7 +2382,7 @@ ul {
 }
 .contactoptions__option3 {
   display: flex;
-  background-image: url("../../assets/ContactPage/bg3.png");
+  background-image: url("//assets/ContactPage/bg3.png");
   background-size: contain;
   align-items: flex-start;
   padding: 53px 71px 57px 32px;
@@ -2481,31 +2481,31 @@ ul {
 }
 
 #name {
-  background-image: url("../../assets/ContactPage/fullname.svg");
+  background-image: url("//assets/ContactPage/fullname.svg");
   background-repeat: no-repeat;
   background-position: 5% 50%;
 }
 
 #email {
-  background-image: url("../../assets/ContactPage/email.svg");
+  background-image: url("//assets/ContactPage/email.svg");
   background-repeat: no-repeat;
   background-position: 5% 50%;
 }
 
 #phone {
-  background-image: url("../../assets/ContactPage/phone.svg");
+  background-image: url("//assets/ContactPage/phone.svg");
   background-repeat: no-repeat;
   background-position: 5% 50%;
 }
 
 #subject {
-  background-image: url("../../assets/ContactPage/subject.svg");
+  background-image: url("//assets/ContactPage/subject.svg");
   background-repeat: no-repeat;
   background-position: 5% 50%;
 }
 
 #message {
-  background-image: url("../../assets/ContactPage/message.svg");
+  background-image: url("//assets/ContactPage/message.svg");
   background-repeat: no-repeat;
   background-position: 5% 17%;
 }
@@ -2634,42 +2634,42 @@ ul {
 }
 
 .aboutcard1 {
-  background-image: url("../assets/AboutUsPage/bg1.png");
+  background-image: url("/assets/AboutUsPage/bg1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .aboutcard2 {
-  background-image: url("../../assets/AboutUsPage/bg2.png");
+  background-image: url("//assets/AboutUsPage/bg2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .aboutcard3 {
-  background-image: url("../../assets/AboutUsPage/bg3.png");
+  background-image: url("//assets/AboutUsPage/bg3.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .aboutcard4 {
-  background-image: url("../../assets/AboutUsPage/bg4.png");
+  background-image: url("//assets/AboutUsPage/bg4.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .aboutcard5 {
-  background-image: url("../../assets/AboutUsPage/bg5.png");
+  background-image: url("//assets/AboutUsPage/bg5.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .aboutcard6 {
-  background-image: url("../../assets/AboutUsPage/bg6.png");
+  background-image: url("//assets/AboutUsPage/bg6.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
