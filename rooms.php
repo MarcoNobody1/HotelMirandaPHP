@@ -16,10 +16,10 @@ $result = $connection->query($query);
 $rooms = $result->fetch_all(MYSQLI_ASSOC);
 
 foreach ($rooms as &$room) {
-
     $room['discountedPrice'] = $room['price'] - ($room['price'] * ($room['discount'] / 100));
 }
 
-echo $blade->run("rooms", ['rooms' => $rooms]);
+$chunks = array_chunk($rooms, 5);
 
+echo $blade->run("rooms", ['rooms' => $chunks]);
 ?>
