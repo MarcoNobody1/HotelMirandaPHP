@@ -2,6 +2,12 @@
 
 require_once("setup.php");
 
-echo $blade->run("contact");
+if ($_POST['name']) {
 
-?>
+ $name = $_POST['name'];
+
+ $query = 'INSERT INTO ';
+};
+
+
+echo $blade->run("contact");
