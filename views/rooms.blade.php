@@ -15,11 +15,12 @@ Hotel Miranda | Rooms
     </div>
 </section>
 <section class="roomshow">
-    <div class="rommshow__inner">
+    <div class="roomshow__inner">
         <div class="swiper roomshow__swiper">
             <div class="swiper-wrapper roomshow__swiper-wrapper">
-                @foreach($rooms as $room)
+                @foreach($rooms as $chunk)
                 <div class="swiper-slide roomshow__swiper-slide">
+                    @foreach($chunk as $room)
                     <div class="roomshow__roomwrapper">
                         <img class="roomshow__photo" src="{{ $room['photo'] }}" alt="Hotel Room">
                         <div class="roomshow__icons">
@@ -35,12 +36,13 @@ Hotel Miranda | Rooms
                             <h3 class="roomshow__title">{{ $room['type'] }}</h3>
                             <p class="roomshow__content">{{ $room['description'] }}</p>
                             <span class="roomshow__price">${{ $room['discountedPrice'] }}/Night</span>
-                            <span class="roomshow__booknow">Book Now</span>
+                            <a href="roomdetails.php" class="roomshow__booknow">Book Now</a>
                         </div>
                     </div>
+                    @endforeach
                 </div>
                 @endforeach
-            </div> 
+            </div>
             <div class="swiper-pagination roomshow__swiper-pagination"></div>
         </div>
     </div>
