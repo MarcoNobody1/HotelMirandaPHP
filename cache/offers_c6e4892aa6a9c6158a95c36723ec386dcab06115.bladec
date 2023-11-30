@@ -30,16 +30,18 @@ Hotel Miranda | Offers
  <span class="roomoffer__imgwrapper-prevprice-price">$<?php echo \htmlentities($room['price']??'', ENT_QUOTES, 'UTF-8', false); ?></span>
  <span class="roomoffer__imgwrapper-prevprice-night">/Night</span>
  </div>
- <div class="roomoffer__imgwrapper-newprice">
+ <div class="roomoffer__imgwrapper-newprice" onclick="goToRoomDetails()">
  <span class="roomoffer__imgwrapper-newprice-price">$<?php echo \htmlentities($room['discountedPrice']??'', ENT_QUOTES, 'UTF-8', false); ?></span>
  <span class="roomoffer__imgwrapper-newprice-night">/Night</span>
  </div>
  </div>
  <div class="roomoffer__contentwrapper">
+ <div class="roomoffer__upperrowcontent">
  <h6 class="roomoffer__pretitle"><?php echo \htmlentities($room['type']??'', ENT_QUOTES, 'UTF-8', false); ?></h6>
  <h2 class="roomoffer__title"><?php echo \htmlentities($room['type']??'', ENT_QUOTES, 'UTF-8', false); ?></h2>
- <p class="roomoffer__content"><?php echo \htmlentities($room['description']??'', ENT_QUOTES, 'UTF-8', false); ?></p>
  </div>
+ <div class="roomoffer__belowrowcontent">
+ <p class="roomoffer__content"><?php echo \htmlentities($room['description']??'', ENT_QUOTES, 'UTF-8', false); ?></p>
  <div class="roomoffer__facilities">
  <div class="roomoffer__facility">
  <img class="roomoffer__facility-icon" src="/assets/OffersPage/airconditioner.svg" alt="Air conditioner">
@@ -82,7 +84,8 @@ Hotel Miranda | Offers
  <span class="roomoffer__facility-desc">Towels</span>
  </div>
  </div>
- <button class="roomoffer__btn" type="button" onclick="goToRoomDetails()">BOOK NOW</button>
+ </div>
+ <button onclick="goToRoomDetails()" class="roomoffer__btn" type="button" onclick="goToRoomDetails()">BOOK NOW</button>
  </div>
  <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
  </div>
@@ -90,9 +93,6 @@ Hotel Miranda | Offers
  </div>
  <div class="swiper-pagination roomoffer__swiper-pagination"></div>
  </div>
-
-
-
  </div>
 </section>
 <section class="popularlist">
@@ -108,19 +108,19 @@ Hotel Miranda | Offers
  <div class="popularlist__roomwrapper">
  <img class="popularlist__photo" src="<?php echo \htmlentities($room['photo']??'', ENT_QUOTES, 'UTF-8', false); ?>" alt="Hotel Room">
  <div class="popularlist__icons">
- <img src="/assets/Rooms__desc Icons/icon 1.svg" alt="" class="">
- <img src="/assets/Rooms__desc Icons/icon 2.svg" alt="" class="">
- <img src="/assets/Rooms__desc Icons/icon 3.svg" alt="" class="">
- <img src="/assets/Rooms__desc Icons/icon 4.svg" alt="" class="">
- <img src="/assets/Rooms__desc Icons/icon 5.svg" alt="" class="">
- <img src="/assets/Rooms__desc Icons/icon 6.svg" alt="" class="">
- <img src="/assets/Rooms__desc Icons/icon 7.svg" alt="" class="">
+ <img src="/assets/Rooms__desc Icons/icon 1.svg" alt="Icon 1" class="">
+ <img src="/assets/Rooms__desc Icons/icon 2.svg" alt="Icon 2" class="">
+ <img src="/assets/Rooms__desc Icons/icon 3.svg" alt="Icon 3" class="">
+ <img src="/assets/Rooms__desc Icons/icon 4.svg" alt="Icon 4" class="">
+ <img src="/assets/Rooms__desc Icons/icon 5.svg" alt="Icon 5" class="">
+ <img src="/assets/Rooms__desc Icons/icon 6.svg" alt="Icon 6" class="">
+ <img src="/assets/Rooms__desc Icons/icon 7.svg" alt="Icon 7" class="">
  </div>
  <div class="popularlist__desc">
  <h3 class="popularlist__room-title"><?php echo \htmlentities($room['type']??'', ENT_QUOTES, 'UTF-8', false); ?></h3>
  <p class="popularlist__content"><?php echo \htmlentities($room['description']??'', ENT_QUOTES, 'UTF-8', false); ?></p>
  <span class="popularlist__price">$<?php echo \htmlentities($room['discountedPrice']??'', ENT_QUOTES, 'UTF-8', false); ?>/Night</span>
- <span class="popularlist__booknow">Book Now</span>
+ <span onclick="goToRoomDetails()" class="popularlist__booknow">Book Now</span>
  </div>
  </div>
  </div>
