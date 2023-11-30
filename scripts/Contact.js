@@ -3,6 +3,7 @@ const menuCross = document.getElementById("menuCross");
 const nav = document.getElementById("nav");
 const header = document.querySelector(".header");
 
+
 menuBurguer.addEventListener("click", () => {
   menuBurguer.classList.add("header__menuiconburguer--closed");
   menuCross.classList.remove("header__menuiconcross--closed");
@@ -33,6 +34,22 @@ window.addEventListener("mousemove", (event) => {
   } else if (event.clientY > 210 && window.innerWidth > 999) {
     header.classList.remove("header--float");
   }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const form = document.getElementById('contact_form');
+
+  form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      Swal.fire({
+          title: 'Form Not Submitted',
+          text: 'In the future, this will be used to send messages to the hotel!',
+          icon: 'info',
+          confirmButtonText: 'Ok'
+      });
+  });
 });
 
 let form = document.querySelector("#contact_form");
