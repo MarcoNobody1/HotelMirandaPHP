@@ -1,4 +1,4 @@
-@import "/variables";
+@import "../variables";
 
 .aboutusrestaurant {
     margin-bottom: 60px;
@@ -37,5 +37,29 @@
         font-weight: 400;
         letter-spacing: -1.05px;
         margin-bottom: 26px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .aboutusrestaurant{
+        padding: 20px;
+        &__inner {
+            padding: 20px;
+            max-width: none;
+            margin: 0;
+            display: flex;
+            gap: 5%;
+        }
+        &__img {
+            width: 530px;
+            height: 420px;
+            margin-bottom: 32px;
+        }
+        &__title {
+            max-width: 440px;
+        }
+        &__content {
+            max-width: 400px;
+        }
     }
 }
