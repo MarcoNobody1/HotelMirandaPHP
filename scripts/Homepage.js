@@ -3,7 +3,6 @@ const menuCross = document.getElementById("menuCross");
 const nav = document.getElementById("nav");
 const header = document.querySelector(".header");
 
-
 menuBurguer.addEventListener("click", () => {
   menuBurguer.classList.add("header__menuiconburguer--closed");
   menuCross.classList.remove("header__menuiconcross--closed");
@@ -71,6 +70,7 @@ function initFacilitiesSwiper() {
   var swiper2;
   if (window.matchMedia("(max-width: 1000px)").matches) {
     facilitiesSwiper.classList.add("swiper");
+    facilitieswrapper.classList.add("swiper-wrapper");
     swiper2 = new Swiper(".facilities__swiper", {
       pagination: {
         el: ".swiper-pagination",
@@ -110,13 +110,15 @@ initMenuSwiper();
 function initMenuPhotoSwiper() {
   var swiper4;
   if (window.matchMedia("(max-width: 1000px)").matches) {
+    menuphotoswiper.classList.add("swiper");
+    menuphotowrapper.classList.add("swiper-wrapper");
     swiper4 = new Swiper("#menuphotoswiper", {
-      loop:true,
+      loop: true,
       pagination: {
         el: "#menuphotopagination",
       },
     });
-  } else{
+  } else {
     menuphotoswiper.classList.remove("swiper");
     menuphotowrapper.classList.remove("swiper-wrapper");
   }
@@ -131,10 +133,42 @@ window.addEventListener("resize", () => {
   initMenuPhotoSwiper();
 });
 
-const goToRooms = () => {
-  window.location.href = 'rooms.php';
+const scrollToFirstStop = () => {
+  var targetElement = document.getElementById("firststop");
+
+  if (targetElement) {
+    var rect = targetElement.getBoundingClientRect();
+    var targetElementPosition = rect.top + window.scrollY;
+
+    window.scrollTo({
+      top: targetElementPosition,
+      behavior: "smooth",
+    });
+  }
 }
 
-const goToAboutUs = () =>{
+const goToAboutUs = () => {
+
   window.location.href = 'aboutus.php';
 }
+
+const goToOffers = () => {
+
+  window.location.href = 'offers.php';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const form = document.getElementById('checkavailability_form');
+
+  form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      Swal.fire({
+          title: 'Unsent Verification',
+          text: 'In the future, this will be used to check available dates in the rooms!',
+          icon: 'info',
+          confirmButtonText: 'Ok'
+      });
+  });
+});
