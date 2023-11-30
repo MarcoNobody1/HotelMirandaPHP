@@ -36,7 +36,7 @@ Hotel Miranda | Rooms
                             <h3 class="roomshow__title">{{ $room['type'] }}</h3>
                             <p class="roomshow__content">{{ $room['description'] }}</p>
                             <span class="roomshow__price">${{ $room['discountedPrice'] }}/Night</span>
-                            <a href="roomdetails.php" class="roomshow__booknow">Book Now</a>
+                            <a onclick="goToRoomDetails()" class="roomshow__booknow">Book Now</a>
                         </div>
                     </div>
                     @endforeach
