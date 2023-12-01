@@ -8,11 +8,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]) && isset($_POST["subject"]) && isset($_POST["message"])
     ) {
         $currentDateTime = date("Y-m-d H:i:s");
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $phone = $_POST["phone"];
-        $subject = $_POST["subject"];
-        $message = $_POST["message"];
+        $name = htmlspecialchars($_POST["name"]);
+        $email = htmlspecialchars($_POST["email"]);
+        $phone = htmlspecialchars($_POST["phone"]);
+        $subject = htmlspecialchars($_POST["subject"]);
+        $message = htmlspecialchars($_POST["message"]);
         $archived = false;
 
         $sql = "INSERT INTO contact (date, name, email, phone, subject, comment, archived) VALUES (?,?, ?, ?, ?, ?, ?)";
