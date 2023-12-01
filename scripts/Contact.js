@@ -3,7 +3,6 @@ const menuCross = document.getElementById("menuCross");
 const nav = document.getElementById("nav");
 const header = document.querySelector(".header");
 
-
 menuBurguer.addEventListener("click", () => {
   menuBurguer.classList.add("header__menuiconburguer--closed");
   menuCross.classList.remove("header__menuiconcross--closed");
@@ -36,30 +35,63 @@ window.addEventListener("mousemove", (event) => {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-
-  const form = document.getElementById('contact_form');
-
-  form.addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      Swal.fire({
-          title: 'Form Not Submitted',
-          text: 'In the future, this will be used to send messages to the hotel!',
-          icon: 'info',
-          confirmButtonText: 'Ok'
-      });
+const notification = (text, icon, toast = true, title = "FORM NOT SUBMITTED", timer = 3000) => {
+  return Swal.fire({
+    toast: toast,
+    position: "top",
+    title: title,
+    timerProgressBar: toast,
+    text: text,
+    icon: icon,
+    showConfirmButton: !toast,
+    timer: timer,
   });
-});
+};
 
-let form = document.querySelector("#contact_form");
-let nameinput = document.querySelector("#name");
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact_form");
+  let nameinput = document.querySelector("#name");
+  let emailinput = document.querySelector("#email");
+  let phoneinput = document.querySelector("#phone");
+  let subjectinput = document.querySelector("#subject");
+  let messageinput = document.querySelector("#message");
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-form.addEventListener("submit", (e) => {
-  if (nameinput.value.trim() === "") {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
-    console.log("x")
-  } else {
-    console.log("y");
-  }
+
+    if (nameinput.value.trim() === "") {
+      notification("Error: Name cannot be empty", "error", true);
+    } else if (
+      emailinput.value.trim() === "" ||
+      !emailRegex.test(emailinput.value)
+    ) {
+      notification("Error: Email not valid. Check your answer again.", "error");
+    } else if (phoneinput.value.trim() === "") {
+      notification("Error: Phone not valid. Check your answer again.", "error");
+    } else if (subjectinput.value.length <= 2) {
+      notification("Error: Subject must be at least 3 characters long", "error");
+    } else if (messageinput.value.trim() === "") {
+      notification("Error: Message cannot be empty", "error");
+    } else {
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.notification) {
+            notification(data.notification[0], data.notification[1], data.notification[2], data.notification[3]);
+          }
+        })
+        .catch((error) => {
+          notification(
+            "Oops! Something went wrong. Try again later, please.",
+            "error"
+          );
+        });
+    }
+  });
 });
