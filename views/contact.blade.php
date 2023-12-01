@@ -71,4 +71,5 @@ Hotel Miranda | Contact
 @endsection
 @section('scripts')
 <script src="/scripts/Contact.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 @endsection
