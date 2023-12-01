@@ -71,5 +71,6 @@ Hotel Miranda | Contact
 <?php $this->stopSection(); ?>
 <?php $this->startSection('scripts'); ?>
 <script src="/scripts/Contact.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <?php $this->stopSection(); ?>
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>
