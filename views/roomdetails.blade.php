@@ -228,4 +228,5 @@ Hotel Miranda | Room Details
 @endsection
 @section('scripts')
 <script src="/scripts/RoomDetails.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 @endsection
