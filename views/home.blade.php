@@ -11,11 +11,11 @@ Hotel Miranda | Home
         <button type="button" onclick="goToAboutUs()" class="intro__info-learnbtn">LEARN MORE</button>
     </div>
 
-    <form name="dates-form" class="intro__form" id="checkavailability_form" action="" method="post">
+    <form name="dates-form" class="intro__form" id="checkavailability_form" action="/rooms.php" method="GET">
         <label for="arrival" class="intro__form-arrivallbl">Arrival Date</label>
-        <input name="arrival" type="date" id="arrival" class="intro__form-arrivalinp">
+        <input name="arrival" type="date" value="{{date('Y-m-d')}}" min="{{date('Y-m-d')}}" max="{{date('Y-m-d', strtotime('+1 Year'))}}" id="arrival" class="intro__form-arrivalinp">
         <label for="departure" class="intro__form-departurelbl">Departure Date</label>
-        <input for="departure" type="date" id="departure" class="intro__form-departureinp">
+        <input name="departure" type="date" value="{{date('Y-m-d', strtotime('+1 day'))}}" min="{{date('Y-m-d', strtotime('+1 day'))}}" max="{{date('Y-m-d', strtotime('+1 Year'))}}" id="departure" class="intro__form-departureinp">
         <br>
         <button name="availability-btn" type="submit" class="intro__form-btn">CHECH AVAILABILITY</button>
     </form>
