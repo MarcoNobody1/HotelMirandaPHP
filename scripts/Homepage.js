@@ -156,19 +156,3 @@ const goToOffers = () => {
 
   window.location.href = 'offers.php';
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  const form = document.getElementById('checkavailability_form');
-
-  form.addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      Swal.fire({
-          title: 'Unsent Verification',
-          text: 'In the future, this will be used to check available dates in the rooms!',
-          icon: 'info',
-          confirmButtonText: 'Ok'
-      });
-  });
-});
