@@ -35,7 +35,13 @@ window.addEventListener("mousemove", (event) => {
   }
 });
 
-const notification = (text, icon, toast = true, title = "FORM NOT SUBMITTED", timer = 3000) => {
+const notification = (
+  text,
+  icon,
+  toast = true,
+  title = "FORM NOT SUBMITTED",
+  timer = 3000
+) => {
   return Swal.fire({
     toast: toast,
     position: "top",
@@ -45,6 +51,10 @@ const notification = (text, icon, toast = true, title = "FORM NOT SUBMITTED", ti
     icon: icon,
     showConfirmButton: !toast,
     timer: timer,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      location.reload();
+    }
   });
 };
 
@@ -70,7 +80,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (phoneinput.value.trim() === "") {
       notification("Error: Phone not valid. Check your answer again.", "error");
     } else if (subjectinput.value.length <= 2) {
-      notification("Error: Subject must be at least 3 characters long", "error");
+      notification(
+        "Error: Subject must be at least 3 characters long",
+        "error"
+      );
     } else if (messageinput.value.trim() === "") {
       notification("Error: Message cannot be empty", "error");
     } else {
@@ -83,7 +96,13 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
         .then((data) => {
           if (data.notification) {
-            notification(data.notification[0], data.notification[1], data.notification[2], data.notification[3]);
+            notification(
+              data.notification[0],
+              data.notification[1],
+              data.notification[2],
+              data.notification[3],
+              99999
+            );
           }
         })
         .catch((error) => {
