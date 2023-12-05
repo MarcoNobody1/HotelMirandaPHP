@@ -26,7 +26,8 @@
     &--checkinlabel,
     &--checkoutlabel,
     &--emaillabel,
-    &--fullnamelabel,
+    &--namelabel,
+    &--surnamelabel,
     &--phonelabel,
     &--specialrequestlabel {
       @include pricetitle($font: 0.875rem, $theme: #222, $align: left);
@@ -36,7 +37,8 @@
     &--inputcheckin,
     &--inputcheckout,
     &--inputemail,
-    &--inputfullname,
+    &--inputname,
+    &--inputsurname,
     &--inputphone {
       width: 290px;
       height: 60px;
