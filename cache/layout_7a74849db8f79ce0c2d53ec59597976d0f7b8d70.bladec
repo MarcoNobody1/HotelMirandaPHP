@@ -35,8 +35,6 @@
  </nav>
  <div class="header__icons">
  <img class="header__icons-profile" src="/assets/HeaderProfileIcon.svg" alt="Profile Icon">
- <img class="header__icons-search" src="/assets/HeaderSearchIcon.svg" alt="Search Icon">
- <img class="header__icons-menu" src="/assets/HeaderMenuIcon.svg" alt="Search Icon">
  </div>
  </header>
  <main>
