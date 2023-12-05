@@ -10,6 +10,7 @@ FROM room r
 LEFT JOIN photos p ON r.id = p.room_id
 LEFT JOIN room_amenities ra ON r.id = ra.room_id
 LEFT JOIN amenity a ON ra.amenity_id = a.id
+WHERE r.availability = "Available"
 GROUP BY r.id;';
 
 $result = $connection->query($query);
