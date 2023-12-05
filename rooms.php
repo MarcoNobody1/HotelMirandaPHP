@@ -7,7 +7,7 @@ if (isset($_GET["arrival"]) && isset($_GET["departure"])) {
     $checkin = htmlspecialchars($_GET["arrival"]);
     $_SESSION['arrival'] = $checkin;
     $checkout = htmlspecialchars($_GET["departure"]);
-    $_SESSION['arrival'] = $checkout;
+    $_SESSION['departure'] = $checkout;
 
     $query = 'SELECT r.*,
     GROUP_CONCAT(DISTINCT p.photo_url) as photo,
@@ -16,7 +16,7 @@ if (isset($_GET["arrival"]) && isset($_GET["departure"])) {
     LEFT JOIN photos p ON r.id = p.room_id
     LEFT JOIN room_amenities ra ON r.id = ra.room_id
     LEFT JOIN amenity a ON ra.amenity_id = a.id
-    WHERE r.availability = "Available" AND discount = 0
+    WHERE r.availability = "Available"
     AND NOT EXISTS (
         SELECT 1
         FROM booking b
@@ -39,7 +39,7 @@ GROUP BY r.id;
     LEFT JOIN photos p ON r.id = p.room_id
     LEFT JOIN room_amenities ra ON r.id = ra.room_id
     LEFT JOIN amenity a ON ra.amenity_id = a.id
-    WHERE r.availability = "Available" AND discount = 0
+    WHERE r.availability = "Available"
     GROUP BY r.id;
 ';
 }
@@ -53,7 +53,7 @@ $rooms = $result->fetch_all(MYSQLI_ASSOC);
 foreach ($rooms as &$room) {
     $room['discountedPrice'] = $room['price'] - ($room['price'] * ($room['discount'] / 100));
 }
-session_destroy();
+
 $chunks = array_chunk($rooms, 5);
 
 echo $blade->run("rooms", ['rooms' => $chunks]);
