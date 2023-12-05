@@ -2017,6 +2017,7 @@ ul {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
+  text-align: center;
 }
 .roomsdetails__form {
   padding: 25px 25px 25px 19px;
@@ -2171,6 +2172,7 @@ ul {
   }
   .roomsdetails__description {
     margin: -350px 0 0;
+    text-align: left;
   }
   .roomsdetails__wrapper {
     flex-direction: row;
@@ -2357,8 +2359,8 @@ ul {
   width: 335px;
   height: 218px;
   margin: 0 auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .roomsrelated__price {
   color: #bead8e;
@@ -2418,6 +2420,7 @@ ul {
   font-family: Archivo;
   font-size: 1rem;
   font-weight: 700;
+  text-decoration: none;
 }
 .roomshow__booknow:hover {
   cursor: pointer;
@@ -2504,6 +2507,9 @@ ul {
     display: inline-block;
   }
 }
+.roomoffer {
+  margin-bottom: 15px;
+}
 .roomoffer__btn {
   background: #bead8e;
   font-size: 0.875rem;
@@ -2514,6 +2520,8 @@ ul {
   padding: 1.406rem 2.938rem;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
 }
 .roomoffer__btn:hover {
   transition: all 250ms ease-out;
@@ -2535,14 +2543,14 @@ ul {
   margin-bottom: 24px;
 }
 .roomoffer__contentwrapper {
-  margin-bottom: 24px;
+  margin-bottom: 45px;
 }
 .roomoffer__facilities {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 200px;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   gap: 17px;
   width: 100%;
 }
@@ -2641,6 +2649,13 @@ ul {
   letter-spacing: -1.44px;
   margin-bottom: 16px;
 }
+.roomoffer .swiper-pagination-bullet {
+  width: 25px !important;
+  height: 25px !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  font-family: Roboto;
+}
 
 @media only screen and (min-width: 1000px) {
   .roomoffer__inner {
@@ -2676,12 +2691,12 @@ ul {
     max-height: 500px;
   }
   .roomoffer__imgwrapper-newprice {
-    right: 80px;
+    right: 180px;
     bottom: -60px;
     z-index: 5;
   }
   .roomoffer__imgwrapper-prevprice {
-    right: 80px;
+    right: 180px;
     bottom: -20px;
     z-index: 5;
   }
@@ -2700,6 +2715,7 @@ ul {
   font-family: Archivo;
   font-size: 1rem;
   font-weight: 700;
+  text-decoration: none;
 }
 .popularlist__booknow:hover {
   cursor: pointer;
