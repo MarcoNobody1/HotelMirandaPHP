@@ -64,21 +64,84 @@ window.addEventListener("resize", () => {
 });
 
 const goToRoomDetails = () => {
+  window.location.href = "roomdetails.php";
+};
 
-  window.location.href = 'roomdetails.php';
-}
+const notification = (
+  text,
+  icon,
+  toast = true,
+  title = "FORM NOT SUBMITTED",
+  timer = 3000
+) => {
+  return Swal.fire({
+    toast: toast,
+    position: "top",
+    title: title,
+    timerProgressBar: toast,
+    text: text,
+    icon: icon,
+    showConfirmButton: !toast,
+    timer: timer,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      location.reload();
+      window.location.href = "index.php";
+    }
+  });
+};
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("roomsdetails__form");
+  let firstnameinput = document.querySelector("#firstname");
+  let surnameinput = document.querySelector("#surname");
+  let emailinput = document.querySelector("#availemail");
+  let phoneinput = document.querySelector("#availphone");
+  let specialRequestinput = document.querySelector("#specialrequest");
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    Swal.fire({
-      title: "Unsent Verification",
-      text: "In the future, this will be used to check available dates in this specific room!",
-      icon: "info",
-      confirmButtonText: "Ok",
-    });
+    if (firstnameinput.value.trim() === "") {
+      notification("Error: Name cannot be empty", "error", true);
+    } else if (surnameinput.value.trim() === "") {
+      notification("Error: Surname cannot be empty", "error", true);
+    } else if (
+      emailinput.value.trim() === "" ||
+      !emailRegex.test(emailinput.value)
+    ) {
+      notification("Error: Email not valid. Check your answer again.", "error");
+    } else if (phoneinput.value.trim() === "") {
+      notification("Error: Phone not valid. Check your answer again.", "error");
+    } else if (specialRequestinput.value.trim() === "") {
+      notification("Error: Request cannot be empty", "error");
+    } else {
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.notification) {
+            notification(
+              data.notification[0],
+              data.notification[1],
+              data.notification[2],
+              data.notification[3],
+              99999
+            );
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          notification(
+            "Oops! Something went wrong. Try again later, please.",
+            "error"
+          );
+        });
+    }
   });
 });
