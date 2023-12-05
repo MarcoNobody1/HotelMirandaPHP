@@ -5,6 +5,7 @@
 
   &__booknow {
     @include roomprice($theme: #bdbdbd);
+    text-decoration: none;
     &:hover {
       cursor: pointer;
     }
@@ -42,7 +43,7 @@
     margin-right: 19px;
   }
   &__roomwrapper {
-    margin:0 auto 52px;
+    margin: 0 auto 52px;
     max-width: 375px;
   }
   &__title {
@@ -64,7 +65,7 @@
   &__desc {
     display: inline-block;
   }
-  .swiper-pagination-bullet{
+  .swiper-pagination-bullet {
     width: 25px !important;
     height: 25px !important;
     font-size: 20px !important;
