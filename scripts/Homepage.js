@@ -145,14 +145,29 @@ const scrollToFirstStop = () => {
       behavior: "smooth",
     });
   }
-}
+};
 
 const goToAboutUs = () => {
+  window.location.href = "aboutus.php";
+};
 
-  window.location.href = 'aboutus.php';
-}
+const arrivalInput = document.getElementById("arrival");
+
+arrivalInput.addEventListener("change", () => {
+  const departureInput = document.getElementById("departure");
+
+  const arrivalDate = new Date(arrivalInput.value);
+
+  const minDepartureDate = new Date(arrivalDate);
+  minDepartureDate.setDate(minDepartureDate.getDate() + 1);
+
+  const formattedMinDepartureDate = minDepartureDate
+    .toISOString()
+    .split("T")[0];
+
+  departureInput.min = formattedMinDepartureDate;
+});
 
 const goToOffers = () => {
-
-  window.location.href = 'offers.php';
-}
+  window.location.href = "offers.php";
+};
