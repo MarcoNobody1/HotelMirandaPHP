@@ -26,9 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $roomDetail = $result0->fetch_assoc();
     $roomDetail['finalPrice'] = $roomDetail['price'] - ($roomDetail['price'] * ($roomDetail['discount'] / 100));
 
-} else if ($_SERVER["REQUEST_METHOD"] == "GET") {
-
-
+} else if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
@@ -46,7 +44,9 @@ $result = $connection->query($query);
 $allRooms = $result->fetch_all(MYSQLI_ASSOC);
 $randomRoomIndices = array_rand($allRooms, 5);
 $recommendedRooms = array_intersect_key($allRooms, array_flip($randomRoomIndices));
-
+foreach ($recommendedRooms as &$room) {
+    $room['discountedPrice'] = $room['price'] - ($room['price'] * ($room['discount'] / 100));
+}
 
 
 echo $blade->run("roomdetails", ['recommendedRooms' => $recommendedRooms, 'roomdetails' => $roomDetail, 'checkin' => $checkin, 'checkout' => $checkout]);
