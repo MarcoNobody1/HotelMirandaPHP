@@ -138,10 +138,11 @@ Hotel Miranda | Room Details
     <h4 class="roomsrelated__title">Related Rooms</h4>
     <div class="swiper roomsrelated__swiper" id="roomsrelated__swiper">
         <div class="swiper-wrapper roomsrelated__swiperwrapper">
+            @foreach($recommendedRooms as $room)
             <div class="swiper-slide roomsrelated__cardslide">
                 <div class="roomsrelated__card">
                     <div class="roomsrelated__roomwrapper">
-                        <img class="roomsrelated__photo" src="../assets/Rooms_swiper/room 1.jpg" alt="Hotel Room">
+                        <img class="roomsrelated__photo" src="{{ $room['photo'] }}" alt="Hotel Room">
                         <div class="roomsrelated__icons">
                             <img src="../assets/Rooms__desc Icons/icon 1.svg" alt="" class="">
                             <img src="../assets/Rooms__desc Icons/icon 2.svg" alt="" class="">
@@ -152,64 +153,15 @@ Hotel Miranda | Room Details
                             <img src="../assets/Rooms__desc Icons/icon 7.svg" alt="" class="">
                         </div>
                         <div class="roomsrelated__desc">
-                            <h3 class="roomsrelated__room-title">Minimal Duplex Room</h3>
-                            <p class="roomsrelated__content">Experience modern simplicity in our Minimal Duplex
-                                Room. Clean lines, cozy sleeping area, and a touch of charm await you for a unique
-                                stay.</p>
-                            <span class="roomsrelated__price">$345/Night</span>
+                            <h3 class="roomsrelated__room-title">{{ $room['type'] }}</h3>
+                            <p class="roomsrelated__content">{{ $room['description'] }}</p>
+                            <span class="roomsrelated__price">${{ $room['discountedPrice'] }}/Night</span>
                             <span onclick="goToRoomDetails()" class="roomsrelated__booknow">Book Now</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide roomsrelated__cardslide">
-                <div class="roomsrelated__card">
-                    <div class="roomsrelated__roomwrapper">
-                        <img class="roomsrelated__photo" src="../assets/Rooms_swiper/room 2.jpg" alt="Hotel Room">
-                        <div class="roomsrelated__icons">
-                            <img src="../assets/Rooms__desc Icons/icon 1.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 2.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 3.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 4.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 5.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 6.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 7.svg" alt="" class="">
-                        </div>
-                        <div class="roomsrelated__desc">
-                            <h3 class="roomsrelated__room-title">Minimal Duplex Room</h3>
-                            <p class="roomsrelated__content">Experience modern simplicity in our Minimal Duplex
-                                Room. Clean lines, cozy sleeping area, and a touch of charm await you for a unique
-                                stay.</p>
-                            <span class="roomsrelated__price">$345/Night</span>
-                            <span onclick="goToRoomDetails()" class="roomsrelated__booknow">Book Now</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide roomsrelated__cardslide">
-                <div class="roomsrelated__card">
-                    <div class="roomsrelated__roomwrapper">
-                        <img class="roomsrelated__photo" src="../assets/Rooms_swiper/room 3.jpg" alt="Hotel Room">
-                        <div class="roomsrelated__icons">
-                            <img src="../assets/Rooms__desc Icons/icon 1.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 2.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 3.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 4.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 5.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 6.svg" alt="" class="">
-                            <img src="../assets/Rooms__desc Icons/icon 7.svg" alt="" class="">
-                        </div>
-                        <div class="roomsrelated__desc">
-                            <h3 class="roomsrelated__room-title">Minimal Duplex Room</h3>
-                            <p class="roomsrelated__content">Experience modern simplicity in our Minimal Duplex
-                                Room. Clean lines, cozy sleeping area, and a touch of charm await you for a unique
-                                stay.</p>
-                            <span class="roomsrelated__price">$345/Night</span>
-                            <span onclick="goToRoomDetails()" class="roomsrelated__booknow">Book Now</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="swiper-button-next" id="roomsrelated-nextslide"></div>
         <div class="swiper-button-prev" id="roomsrelated-prevslide"></div>
