@@ -9,6 +9,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
+    text-align: center;
   }
   &__form {
     padding: 25px 25px 25px 19px;
@@ -136,6 +137,7 @@
 
     &__description {
       margin: -350px 0 0;
+      text-align: left;
     }
     &__wrapper {
       flex-direction: row;
