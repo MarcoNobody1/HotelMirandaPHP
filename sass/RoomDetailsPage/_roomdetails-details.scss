@@ -130,7 +130,7 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1301px) {
   .roomsdetails {
     margin-bottom: 80px;
 
@@ -140,7 +140,7 @@
     &__wrapper {
       flex-direction: row;
       align-items: flex-start;
-      gap: 5%;
+      gap: 10%;
       width: 100%;
     }
   }
