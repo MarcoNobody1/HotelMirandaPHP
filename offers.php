@@ -3,14 +3,12 @@ session_start();
 require_once("config.php");
 require_once("setup.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
-    if (isset($_GET["arrival"]) && isset($_GET["departure"])) {
 
-        $checkin =  $_SESSION['arrival'];
-        $checkout =  $_SESSION['departure'];
-    }
+if (isset($_SESSION["arrival"]) && isset($_SESSION["departure"])) {
 
+    $checkin =  $_SESSION['arrival'];
+    $checkout =  $_SESSION['departure'];
 
     $query = "SELECT r.*,
     GROUP_CONCAT(DISTINCT p.photo_url) as photo,
@@ -32,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             )
     )
     GROUP BY r.id;
-";
+    ";
 } else {
 
     $query = 'SELECT r.*,
