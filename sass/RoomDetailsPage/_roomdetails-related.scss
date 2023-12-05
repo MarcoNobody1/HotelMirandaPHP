@@ -36,7 +36,7 @@
     width: 335px;
     height: 218px;
     margin: 0 auto;
-    object-fit: contain;
+    object-fit: cover;
   }
   &__price {
     @include roomprice;
