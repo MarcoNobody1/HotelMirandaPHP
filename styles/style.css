@@ -2048,7 +2048,7 @@ ul {
   transition: all 150ms ease-out;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
-.roomsdetails__form--checkinlabel, .roomsdetails__form--checkoutlabel, .roomsdetails__form--emaillabel, .roomsdetails__form--fullnamelabel, .roomsdetails__form--phonelabel, .roomsdetails__form--specialrequestlabel {
+.roomsdetails__form--checkinlabel, .roomsdetails__form--checkoutlabel, .roomsdetails__form--emaillabel, .roomsdetails__form--namelabel, .roomsdetails__form--surnamelabel, .roomsdetails__form--phonelabel, .roomsdetails__form--specialrequestlabel {
   color: #222;
   text-align: left;
   font-family: Archivo;
@@ -2059,7 +2059,7 @@ ul {
   display: inline-block;
   width: 100%;
 }
-.roomsdetails__form--inputcheckin, .roomsdetails__form--inputcheckout, .roomsdetails__form--inputemail, .roomsdetails__form--inputfullname, .roomsdetails__form--inputphone {
+.roomsdetails__form--inputcheckin, .roomsdetails__form--inputcheckout, .roomsdetails__form--inputemail, .roomsdetails__form--inputname, .roomsdetails__form--inputsurname, .roomsdetails__form--inputphone {
   width: 290px;
   height: 60px;
   background: #f8f8f8;
