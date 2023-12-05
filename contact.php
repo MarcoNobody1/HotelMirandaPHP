@@ -1,7 +1,9 @@
 <?php
-
+session_start();
 require_once("setup.php");
 require_once("config.php");
+unset($_SESSION['arrival']);
+unset($_SESSION['departure']);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (
