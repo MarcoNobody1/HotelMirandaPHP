@@ -8,7 +8,7 @@ Hotel Miranda | AboutUs
         <h6 class="aboutusintro__pretitle">THE ULTIMATE LUXURY</h6>
         <h1 class="aboutusintro__title">About Us</h1>
         <div class="aboutusintro__pages">
-            <a class="aboutusintro__linkprev" href="/index.html">Home</a>
+            <a class="aboutusintro__linkprev" href="/">Home</a>
             <span class="aboutusintro__linkbar">|</span>
             <span class="aboutusintro__linktext">About</span>
         </div>
