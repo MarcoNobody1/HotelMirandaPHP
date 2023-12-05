@@ -9,28 +9,19 @@ FROM room r
 LEFT JOIN photos p ON r.id = p.room_id
 LEFT JOIN room_amenities ra ON r.id = ra.room_id
 LEFT JOIN amenity a ON ra.amenity_id = a.id
+WHERE discount != 0
 GROUP BY r.id;';
 
 $result = $connection->query($query);
-$allRooms = $result->fetch_all(MYSQLI_ASSOC);
-
-foreach ($allRooms as &$room) {
-    $room['discountedPrice'] = $room['price'] - ($room['price'] * ($room['discount'] / 100));
-}
-
-$randomRoomIndices = array_rand($allRooms, 5);
-$randomRooms = array_intersect_key($allRooms, array_flip($randomRoomIndices));
-
-
-
-$discountedRooms = array_filter($allRooms, function ($room) {
-    return $room['discount'] !== 0;
-});
-
+$discountedRooms = $result->fetch_all(MYSQLI_ASSOC);
 
 foreach ($discountedRooms as &$room) {
     $room['discountedPrice'] = $room['price'] - ($room['price'] * ($room['discount'] / 100));
 }
+
+$randomRoomIndices = array_rand($discountedRooms, 5);
+$randomRooms = array_intersect_key($discountedRooms, array_flip($randomRoomIndices));
+
 
 $chunks = array_chunk($discountedRooms, 3);
 
