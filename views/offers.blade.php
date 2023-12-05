@@ -28,14 +28,14 @@ Hotel Miranda | Offers
                                 <span class="roomoffer__imgwrapper-prevprice-price">${{ $room['price'] }}</span>
                                 <span class="roomoffer__imgwrapper-prevprice-night">/Night</span>
                             </div>
-                            <div class="roomoffer__imgwrapper-newprice" onclick="goToRoomDetails()">
+                            <div class="roomoffer__imgwrapper-newprice">
                                 <span class="roomoffer__imgwrapper-newprice-price">${{ $room['discountedPrice'] }}</span>
                                 <span class="roomoffer__imgwrapper-newprice-night">/Night</span>
                             </div>
                         </div>
                         <div class="roomoffer__contentwrapper">
                             <div class="roomoffer__upperrowcontent">
-                                <h6 class="roomoffer__pretitle">{{ $room['type'] }}</h6>
+                                <h6 class="roomoffer__pretitle">Room {{ $room['number'] }}</h6>
                                 <h2 class="roomoffer__title">{{ $room['type'] }}</h2>
                             </div>
                             <div class="roomoffer__belowrowcontent">
@@ -83,15 +83,16 @@ Hotel Miranda | Offers
                                     </div>
                                 </div>
                             </div>
-                            <button onclick="goToRoomDetails()" class="roomoffer__btn" type="button" onclick="goToRoomDetails()">BOOK NOW</button>
+                            <a href="roomdetails.php?id={{ $room['id'] }}" class="roomoffer__btn">BOOK NOW</a>
                         </div>
-                        @endforeach
                     </div>
                     @endforeach
                 </div>
-                <div class="swiper-pagination roomoffer__swiper-pagination"></div>
+                @endforeach
             </div>
+            <div class="swiper-pagination roomoffer__swiper-pagination"></div>
         </div>
+    </div>
 </section>
 <section class="popularlist">
     <div class="popularlist__inner">
@@ -117,7 +118,7 @@ Hotel Miranda | Offers
                                 <h3 class="popularlist__room-title">{{ $room['type'] }}</h3>
                                 <p class="popularlist__content">{{ $room['description'] }}</p>
                                 <span class="popularlist__price">${{ $room['discountedPrice'] }}/Night</span>
-                                <span onclick="goToRoomDetails()" class="popularlist__booknow">Book Now</span>
+                                <a href="roomdetails.php?id={{ $room['id'] }}" class="popularlist__booknow">Book Now</a>
                             </div>
                         </div>
                     </div>
