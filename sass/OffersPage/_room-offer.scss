@@ -1,8 +1,11 @@
 @import "../variables";
 
 .roomoffer {
+  margin-bottom: 15px;
   &__btn {
     @include button;
+    text-decoration: none;
+    font-size: 1rem;
   }
   &__content {
     @include cardtext($theme: #777);
@@ -11,14 +14,14 @@
     margin-bottom: 24px;
   }
   &__contentwrapper {
-    margin-bottom: 24px;
+    margin-bottom: 45px;
   }
   &__facilities {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 200px;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     gap: 17px;
     width: 100%;
   }
@@ -67,7 +70,7 @@
     color: #b4183d;
   }
   &__imgwrapper-prevprice {
-    position: absolute; 
+    position: absolute;
     right: 20px;
     bottom: 40px;
     text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5);
@@ -117,6 +120,14 @@
     letter-spacing: -1.44px;
     margin-bottom: 16px;
   }
+
+  .swiper-pagination-bullet {
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    font-family: Roboto;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -154,12 +165,12 @@
       max-height: 500px;
     }
     &__imgwrapper-newprice {
-      right: 80px;
+      right: 180px;
       bottom: -60px;
       z-index: 5;
     }
     &__imgwrapper-prevprice {
-      right: 80px;
+      right: 180px;
       bottom: -20px;
       z-index: 5;
     }
