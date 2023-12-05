@@ -28,14 +28,16 @@ Hotel Miranda | Room Details
             </div>
             <img class="roomsdetails__photo" src="{{ $roomdetails['photo'] }}" alt="Room photo">
         </div>
-        <form class="roomsdetails__form" id="roomsdetails__form">
+        <form class="roomsdetails__form" id="roomsdetails__form" method="POST">
             <p class="roomsdetails__form--title">Check Availability</p>
             <label for="checkin" class="roomsdetails__form--checkinlabel">Check In</label>
-            <input type="date" id="checkin" name="checkin" value="{{ $checkin }}" class="roomsdetails__form--inputcheckin">
+            <input type="date" id="checkin" name="checkin" value="{{ $checkin }}" class="roomsdetails__form--inputcheckin" disabled>
             <label for="checkout" class="roomsdetails__form--checkoutlabel">Check Out</label>
-            <input type="date" id="checkout" name="checkout" value="{{ $checkout }}" class="roomsdetails__form--inputcheckout">
-            <label for="fullname" class="roomsdetails__form--fullnamelabel">Full Name</label>
-            <input placeholder="Enter your name" type="text" id="fullname" name="fullname" class="roomsdetails__form--inputfullname">
+            <input type="date" id="checkout" name="checkout" value="{{ $checkout }}" class="roomsdetails__form--inputcheckout" disabled>
+            <label for="name" class="roomsdetails__form--namelabel">Name</label>
+            <input placeholder="Enter your name" type="text" id="firstname" name="firstname" class="roomsdetails__form--inputname">
+            <label for="surname" class="roomsdetails__form--surnamelabel">Surname</label>
+            <input placeholder="Enter your surname" type="text" id="surname" name="surname" class="roomsdetails__form--inputsurname">
             <label for="availemail" class="roomsdetails__form--emaillabel">Email</label>
             <input placeholder="Enter your email" type="email" autocomplete="on" id="availemail" name="email" class="roomsdetails__form--inputemail">
             <label for="availphone" class="roomsdetails__form--phonelabel">Phone</label>
