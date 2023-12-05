@@ -8,7 +8,7 @@ Hotel Miranda | Room Details
         <h6 class="roomsintro__pretitle">THE ULTIMATE LUXURY</h6>
         <h1 class="roomsintro__title">Ultimate Room</h1>
         <div class="roomsintro__pages">
-            <a class="roomsintro__linkprev" href="/index.html">Home</a>
+            <a class="roomsintro__linkprev" href="/">Home</a>
             <span class="roomsintro__linkbar">|</span>
             <span class="roomsintro__linktext">Room Details</span>
         </div>
@@ -19,43 +19,33 @@ Hotel Miranda | Room Details
         <div class="roomsdetails__data">
             <div class="roomsdetails__specs">
                 <div class="roomsdetails__specs--titlegroup">
-                    <h6 class="roomsdetails__specs--pretitle">DOUBLE BED</h6>
-                    <p class="roomsdetails__specs--title">Luxury Double Bed</p>
+                    <h6 class="roomsdetails__specs--pretitle">Room {{ $roomdetails['number'] }}</h6>
+                    <p class="roomsdetails__specs--title">{{ $roomdetails['type'] }}</p>
                 </div>
                 <div class="roomsdetails__specs--pricedetails">
-                    <span class="roomsdetails__specs--price">$345</span>
+                    <span class="roomsdetails__specs--price">${{ $roomdetails['finalPrice'] }}</span>
                 </div>
             </div>
-            <img class="roomsdetails__photo" src="https://dashboardgeneralassets.s3.eu-west-1.amazonaws.com/Fotos+Dashboard/room8.jpeg" alt="Room photo">
+            <img class="roomsdetails__photo" src="{{ $roomdetails['photo'] }}" alt="Room photo">
         </div>
         <form class="roomsdetails__form" id="roomsdetails__form">
             <p class="roomsdetails__form--title">Check Availability</p>
             <label for="checkin" class="roomsdetails__form--checkinlabel">Check In</label>
-            <input type="date" id="checkin" name="checkin" class="roomsdetails__form--inputcheckin">
+            <input type="date" id="checkin" name="checkin" value="{{ $checkin }}" class="roomsdetails__form--inputcheckin">
             <label for="checkout" class="roomsdetails__form--checkoutlabel">Check Out</label>
-            <input type="date" id="checkout" name="checkout" class="roomsdetails__form--inputcheckout">
+            <input type="date" id="checkout" name="checkout" value="{{ $checkout }}" class="roomsdetails__form--inputcheckout">
             <label for="fullname" class="roomsdetails__form--fullnamelabel">Full Name</label>
             <input placeholder="Enter your name" type="text" id="fullname" name="fullname" class="roomsdetails__form--inputfullname">
             <label for="availemail" class="roomsdetails__form--emaillabel">Email</label>
-            <input placeholder="Enter your email" type="email" id="availemail" name="email" class="roomsdetails__form--inputemail">
+            <input placeholder="Enter your email" type="email" autocomplete="on" id="availemail" name="email" class="roomsdetails__form--inputemail">
             <label for="availphone" class="roomsdetails__form--phonelabel">Phone</label>
-            <input placeholder="Enter your phone number" type="phone" id="availphone" name="phone" class="roomsdetails__form--inputphone">
+            <input placeholder="Enter your phone number" autocomplete="on" type="tel" id="availphone" name="phone" class="roomsdetails__form--inputphone">
             <label for="specialrequest" class="roomsdetails__form--specialrequestlabel">Message</label>
             <textarea placeholder="Tell us what you need" name="specialrequest" id="specialrequest" cols="30" rows="10" class="roomsdetails__form--inputspecialrequest"></textarea>
-            <button type="submit" class="roomsdetails__form--button">Check Availability</button>
+            <button type="submit" class="roomsdetails__form--button">Book Now</button>
         </form>
     </div>
-    <p class="roomsdetails__description">Unwind in the lap of luxury with our exquisite Luxury Double Bed room.
-        Revel in the spacious ambiance adorned with tasteful decor, where every detail is meticulously curated to
-        enhance your comfort. Immerse yourself in the plush embrace of our sumptuous double bed, dressed in the
-        finest linens, promising a restorative night's sleep.
-        Indulge in the modern amenities carefully selected to cater to your every need. From the state-of-the-art
-        entertainment system to the well-appointed en-suite bathroom, our Luxury Double Bed room offers a seamless
-        blend of style and convenience. Whether you're here for business or leisure, elevate your stay with the
-        epitome of refinement and personalized service at every turn.
-        Discover a haven of tranquility and sophistication, where your desire for a luxurious retreat is met with
-        impeccable attention to detail. Your journey into unparalleled comfort begins here, at Hotel Miranda's
-        Luxury Double Bed room: a sanctuary of opulence that leaves a lasting impression.</p>
+    <p class="roomsdetails__description">{{ $roomdetails['description'] }}</p>
 </section>
 <section class="roomsamenities">
     <h4 class="roomsamenities__title">Amenities</h4>
