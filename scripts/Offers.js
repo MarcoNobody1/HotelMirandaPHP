@@ -69,7 +69,3 @@ window.addEventListener("resize", () => {
   initOffersSwiper();
   initRoomsSwiper();
 });
-
-const goToRoomDetails = () => {
-  window.location.href = 'roomdetails.php';
-}
