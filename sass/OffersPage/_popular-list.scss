@@ -4,6 +4,7 @@
     margin-bottom: 60px;
     &__booknow {
         @include roomprice($theme: #bdbdbd);
+        text-decoration: none;
         &:hover{
             cursor: pointer;
         }
