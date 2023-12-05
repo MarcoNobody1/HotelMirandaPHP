@@ -8,7 +8,7 @@ Hotel Miranda | Contact
  <h6 class="contactintro__pretitle">THE ULTIMATE LUXURY</h6>
  <h1 class="contactintro__title">New Details</h1>
  <div class="contactintro__pages">
- <a class="contactintro__linkprev" href="/index.html">Home</a>
+ <a class="contactintro__linkprev" href="/">Home</a>
  <span class="contactintro__linkbar">|</span>
  <span class="contactintro__linktext">Blog</span>
  </div>
