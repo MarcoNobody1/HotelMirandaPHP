@@ -2455,6 +2455,8 @@ ul {
   width: 335px;
   height: 218px;
   margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .roomshow__price {
   color: #bead8e;
@@ -2571,6 +2573,8 @@ ul {
   max-width: 335px;
   max-height: 160px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .roomoffer__imgwrapper-newprice-night {
   color: #de5777;
