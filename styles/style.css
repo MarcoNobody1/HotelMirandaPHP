@@ -3474,6 +3474,17 @@ body {
   display: none;
 }
 
+.disclaimer {
+  width: 100%;
+  text-align: center;
+  font-family: Archivo;
+  font-size: 0.813rem;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  color: #222;
+  margin-bottom: 16px;
+}
+
 @media only screen and (min-width: 1000px) {
   .header-bg-rectangle {
     display: block;
