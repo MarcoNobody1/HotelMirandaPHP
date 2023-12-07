@@ -37,6 +37,7 @@
     width: 335px;
     height: 218px;
     margin: 0 auto;
+    object-fit: cover;
   }
   &__price {
     @include roomprice;
