@@ -40,7 +40,7 @@ if (isset($_SESSION["arrival"]) && isset($_SESSION["departure"])) {
     LEFT JOIN photos p ON r.id = p.room_id
     LEFT JOIN room_amenities ra ON r.id = ra.room_id
     LEFT JOIN amenity a ON ra.amenity_id = a.id
-    WHERE r.availability = 'Available' AND WHERE discount != 0
+    WHERE r.availability = 'Available' AND r.discount != 0
     GROUP BY r.id;";
 }
 
