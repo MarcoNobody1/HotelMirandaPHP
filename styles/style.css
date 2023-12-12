@@ -2023,6 +2023,7 @@ ul {
   padding: 25px 25px 25px 19px;
   display: flex;
   flex-direction: column;
+  min-height: 1057px;
 }
 .roomsdetails__form--button {
   background: #bead8e;

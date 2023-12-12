@@ -15,6 +15,7 @@
     padding: 25px 25px 25px 19px;
     display: flex;
     flex-direction: column;
+    min-height: 1057px;
 
     &--button {
       @include button($weight: 400);
